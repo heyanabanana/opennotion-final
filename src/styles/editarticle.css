@@ -1,0 +1,91 @@
+.container_editor {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+.list-non-edit {
+  display: flex;
+  align-items: center;
+}
+
+/* EDIT TITLE */
+.edit-title {
+  font-weight: 300;
+  color: var(--accent-color-light);
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+.edit-title-in {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--accent-color-light);
+  width: 20em;
+}
+
+/* EDIT BODY */
+
+#edit-body-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30em;
+  overflow: hidden;
+  color: var(--text-color);
+  width: 100%;
+  outline: none;
+}
+
+#edit-content-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 30em;
+  min-width: 80vw;
+}
+
+.edit-body-in {
+  min-height: 30em;
+  width: 100%;
+
+  justify-self: baseline;
+  background-color: transparent;
+  border-style: none;
+  border-color: transparent;
+  overflow: hidden;
+  resize: none;
+  color: var(--text-color);
+  outline: none;
+}
+
+.icon {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+}
+.icon:hover {
+  fill: var(--text-color);
+}
+
+.button-edit {
+  margin: 1em 0 1em 0;
+  font-weight: 400;
+  font-size: 0.8em;
+  background-color: var(--subtext-color);
+  padding: 0.2em 0.7em 0.2em 0.7em;
+  border-radius: 1em;
+  margin-top: 0.5em;
+  color: var(--subbackground-color);
+}
+
+.button-edit:hover {
+  background-color: var(--text-color);
+}

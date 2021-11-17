@@ -1,0 +1,125 @@
+.container_login {
+  display: flex;
+  min-width: 100%;
+  min-height: 85vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+}
+
+.left_login {
+  margin: 2em;
+}
+
+.form_login {
+  font-size: 1em;
+  padding: 1em;
+  width: 20em;
+  background-color: var(--background-color);
+  border: none;
+  border-bottom: 1px solid var(--accent-color-light);
+  transition: border 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: border-radius 0.6s linear;
+
+  margin: 1em;
+}
+
+.label_password {
+  display: flex;
+  align-content: baseline;
+}
+.form_login:focus {
+  outline: none;
+  border: 1px solid var(--accent-color-light);
+  border-radius: 2em;
+}
+.email {
+  margin-left: 3em;
+}
+
+.show_password {
+  background: none;
+  border: none;
+  margin-left: -5em;
+}
+#iconClosed {
+  margin-left: -1.2em;
+}
+
+.oculto {
+  visibility: hidden;
+}
+
+.login_button {
+  background: none;
+  border: none;
+  margin-top: 2em;
+  font-size: 1.2em;
+  color: var(--accent-color-light);
+  width: fit-content;
+  padding: 0.5em 1em 0.5em 1em;
+  border-bottom: 1px solid var(--accent-color-light);
+  transition: border 0.6s linear;
+  transition: border-radius 0.6s linear;
+}
+
+.login_button:hover {
+  border: 1px solid var(--accent-color-light);
+  border-radius: 2em;
+}
+
+.login_image {
+  width: 15em;
+}
+
+.title_login {
+  font-size: 3em;
+  font-weight: 300;
+}
+.subtitle_login {
+  font-size: 2em;
+  font-weight: 200;
+  color: var(--subtext-color);
+}
+
+@media screen and (max-width: 730px) {
+  .container_login {
+    flex-direction: column;
+  }
+  .title_login {
+    font-size: 3em;
+    font-weight: 300;
+  }
+  .subtitle_login {
+    font-size: 2em;
+    font-weight: 200;
+    color: var(--subtext-color);
+  }
+  .right_login {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container_login {
+    flex-direction: column;
+  }
+  .title_login {
+    font-size: 2em;
+    font-weight: 300;
+  }
+  .subtitle_login {
+    font-size: 1em;
+    font-weight: 200;
+    color: var(--subtext-color);
+  }
+  .right_login {
+    margin: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.article-container {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-title {
+  font-weight: 400;
+  color: var(--accent-color-light);
+}
+
+.article-date {
+  font-weight: 400;
+  font-size: 0.8em;
+  color: var(--subtext-color);
+}
+.article-author {
+  font-weight: 400;
+  font-size: 0.8em;
+  background-color: var(--subtext-color);
+  padding: 0.2em 0.7em 0.2em 0.7em;
+  border-radius: 1em;
+  margin-top: 0.5em;
+  color: var(--subbackground-color);
+}
+.article-category {
+  max-width: 70%;
+  min-height: 30em;
+}
+.article-edit {
+  border: none;
+  background-color: var(--accent-color-light);
+  padding: 0.4em;
+  width: 5em;
+  border-radius: 2em;
+  color: var(--background-color);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.article-edit:hover {
+  background-color: var(--text-color);
+}

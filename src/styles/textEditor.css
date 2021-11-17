@@ -1,0 +1,112 @@
+/* CONTAINER */
+
+.markdown-editor-post {
+  margin: 3em;
+}
+/* EDITOR */
+
+.editor_title {
+  border: none;
+  background-color: transparent;
+
+  font-size: 2em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  width: 100%;
+  color: var(--accent-color-light);
+}
+.editor_title::placeholder {
+  color: var(--accent-color-light);
+}
+.editor_title:focus {
+  outline: none;
+}
+
+.editor_subtitle {
+  margin: 2em 0 2em 0;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1em;
+  color: var(--subtext-colo);
+  margin-top: 0.5em;
+}
+
+/* AUTHOR */
+.editor_input_text {
+  background: none;
+  padding: 1em;
+  border: none;
+  border-bottom: 1px solid var(--accent-color-light);
+  transition: border 0.6s linear;
+  transition: border-radius 0.6s linear;
+  color: var(--text-color);
+}
+.editor_input_text:focus {
+  outline: none;
+  border: 1px solid var(--accent-color-light);
+  border-radius: 2em;
+}
+/* TEXT EDITOR STYLES */
+
+.container_editor_text {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.editor_textarea {
+  min-height: 30em;
+  justify-self: baseline;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid var(--accent-color-light);
+  overflow: hidden;
+  color: var(--text-color);
+  width: 90%;
+  white-space: wrap;
+  padding: 1em;
+}
+.editor_textarea:focus {
+  outline: none;
+}
+
+.container_mirror {
+  min-height: 30em;
+}
+
+.submit_form {
+  background: none;
+  border: none;
+  margin-top: 2em;
+  font-size: 1.2em;
+  color: var(--accent-color-light);
+  width: fit-content;
+  padding: 0.5em 1em 0.5em 1em;
+  border-bottom: 1px solid var(--accent-color-light);
+  transition: border 0.6s linear;
+  transition: border-radius 0.6s linear;
+}
+.submit_form:hover {
+  border: 1px solid var(--accent-color-light);
+  border-radius: 2em;
+}
+
+.mirror_markdown {
+  font-size: 0.9em;
+  line-height: 2;
+  text-indent: 1em;
+}
+
+@media screen and (max-width: 1127px) {
+  .container_editor_text {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 982px) {
+  .container_editor_text {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
