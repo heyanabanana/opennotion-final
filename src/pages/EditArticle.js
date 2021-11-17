@@ -38,10 +38,9 @@ export default function EditArticle() {
     setContenido(data.contenido);
   };
 
-  const changeTitulo = async (event) => {
-    event.preventDefault();
+  function changeTitulo(e) {
 
-    API.put(`articulos/modificar`, { id: id_articulo, titulo: titulo }).then(
+    API.put(`articulos/modificar/${parseInt(id_articulo)}`, { titulo:titulo }).then(
       (res) => {
         console.log(res);
         console.log(res.data);
@@ -53,8 +52,7 @@ export default function EditArticle() {
   function deleteArticle() {
     if (window.confirm("¿Estás seguro que quieres borrar este artículo?")) {
       API.delete(
-        "https://notion-sinsecurity.herokuapp.com/api/articulos/eliminar/" +
-          parseInt(id_articulo)
+        `articulos/eliminar/${parseInt(id_articulo)}`
       )
         .then(() => console.log("articulo eliminado"))
         .catch((err) => console.log(err));
@@ -69,7 +67,7 @@ export default function EditArticle() {
 
   return (
     <React.Fragment>
-      <form colorScheme="brand" className="markdown-editor-post">
+      <form  className="markdown-editor-post">
         <label>
           <input
             isRequired={true}
@@ -82,7 +80,6 @@ export default function EditArticle() {
             onClick={changeTitulo}
             className="submit_form"
             type="submit"
-            colorScheme="brand"
           >
             Guardar
           </button>
