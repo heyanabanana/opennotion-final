@@ -33,6 +33,8 @@ export default function EditorApp() {
       console.log(res);
       console.log(res.data);
     }, axiosConfig);
+
+    // Meter un navigate aquí a la página principal o al artículo creado:
   };
 
   return (

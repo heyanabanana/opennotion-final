@@ -25,7 +25,7 @@ export default function EditArticle() {
 
   const [contenido, setContenido] = useState();
   const [titulo, setTitulo] = useState();
-
+  
   const getArticle = async () => {
     const articleResponse = await fetch(
       "https://notion-sinsecurity.herokuapp.com/api/articulos/mostrar/" +
@@ -38,9 +38,12 @@ export default function EditArticle() {
     setContenido(data.contenido);
   };
 
-  function changeTitulo(e) {
-
-    API.put(`articulos/modificar/${parseInt(id_articulo)}`, { titulo:titulo }).then(
+  function changeTitulo(event) {
+    event.preventDefault();
+    
+    let titulo = event.target.value;
+    
+    API.put(`articulos/modificar/${parseInt(id_articulo)}`, { id: parseInt(id_articulo), titulo: titulo }).then(
       (res) => {
         console.log(res);
         console.log(res.data);
@@ -74,7 +77,7 @@ export default function EditArticle() {
             type="text"
             className="editor_title"
             defaultValue={titulo}
-            onChange={(e) => setTitulo(e.target.value)}
+            onChange={(e) => setTitulo(e)}
           />
           <button
             onClick={changeTitulo}
