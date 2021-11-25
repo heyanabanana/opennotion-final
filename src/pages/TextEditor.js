@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"
 
 import { useState } from "react";
 import API from "../utils/API";
@@ -17,6 +18,7 @@ const axiosConfig = {
 };
 
 export default function EditorApp() {
+  const navigate = useNavigate();
   const [titulo, setTitulo] = useState();
   const [autor, setAutor] = useState();
   const [categoria, setCategoria] = useState();
@@ -32,9 +34,10 @@ export default function EditorApp() {
     API.post(`categorias/crear`, { categoria }).then((res) => {
       console.log(res);
       console.log(res.data);
+      
+      navigate('/home')
     }, axiosConfig);
-
-    // Meter un navigate aquí a la página principal o al artículo creado:
+    
   };
 
   return (
